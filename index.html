@@ -4,57 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trading With Guru · King</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;overflow:hidden;font-family:'Poppins',sans-serif;background:#010c04;color:#fff}
 
-/* ════════ BACKGROUND ════════ */
+/* ── BG ── */
 .bg{position:fixed;inset:0;z-index:0;overflow:hidden}
 .bg-aurora{position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 90% 55% at 50% 0%,rgba(0,255,80,.18) 0%,transparent 60%),
-    radial-gradient(ellipse 60% 50% at 92% 100%,rgba(255,40,70,.11) 0%,transparent 55%),
-    radial-gradient(ellipse 50% 40% at 8% 95%,rgba(0,160,60,.07) 0%,transparent 50%);
-  animation:aur 9s ease-in-out infinite alternate}
-@keyframes aur{0%{opacity:.8}100%{opacity:1;filter:brightness(1.2)}}
+    radial-gradient(ellipse 100% 60% at 50% -5%,rgba(0,255,80,.2) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 50% at 95% 105%,rgba(255,40,70,.12) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 45% at 5% 95%,rgba(0,160,60,.08) 0%,transparent 50%);
+  animation:aur 8s ease-in-out infinite alternate}
+@keyframes aur{0%{opacity:.8}100%{opacity:1;filter:brightness(1.25)}}
 .bg-grid{position:absolute;inset:0;
-  background-image:linear-gradient(rgba(0,255,80,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,80,.035) 1px,transparent 1px);
-  background-size:52px 52px}
+  background-image:linear-gradient(rgba(0,255,80,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,80,.04) 1px,transparent 1px);
+  background-size:55px 55px}
 .bg-cg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,255,80,.09) 0%,transparent 65%);
+  width:80vh;height:80vh;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,255,80,.1) 0%,transparent 65%);
   animation:cg 5s ease-in-out infinite alternate;pointer-events:none}
-@keyframes cg{from{transform:translate(-50%,-50%) scale(.88);opacity:.5}to{transform:translate(-50%,-50%) scale(1.08);opacity:1}}
-canvas.ptc{position:absolute;inset:0}
+@keyframes cg{from{transform:translate(-50%,-50%) scale(.88);opacity:.5}to{transform:translate(-50%,-50%) scale(1.1);opacity:1}}
+canvas{position:absolute;inset:0}
 
-/* ════════ TICKER ════════ */
+/* ── TICKER ── */
 .ticker{position:fixed;top:0;left:0;right:0;z-index:300;
-  height:clamp(26px,2.5vw,34px);overflow:hidden;
+  height:30px;overflow:hidden;
   background:rgba(1,12,4,.97);border-bottom:1px solid rgba(0,255,80,.12);
   display:flex;align-items:center}
-.t-track{display:flex;white-space:nowrap;animation:tick 26s linear infinite;align-items:center;height:100%}
+.t-track{display:flex;white-space:nowrap;animation:tick 26s linear infinite;align-items:center}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.ti{padding:0 clamp(14px,2vw,26px);font-size:clamp(9px,1vw,11px);font-weight:600;letter-spacing:1px}
+.ti{padding:0 22px;font-size:10px;font-weight:600;letter-spacing:1px}
 .ti.up{color:#00ff55}.ti.dn{color:#ff3349}
 
-/* ════════ PAGE ════════ */
+/* ── PAGE ── */
 .page{position:relative;z-index:10;height:100vh;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:clamp(30px,4vh,52px) clamp(16px,4vw,40px) clamp(34px,4vh,52px);
-  gap:0;overflow:hidden}
+  padding:38px 20px 36px;
+  row-gap:0;overflow:hidden}
 
-/* ════════ LOGO ════════ */
+/* ── LOGO ── */
 .logo-area{position:relative;display:flex;flex-direction:column;align-items:center;
-  margin-bottom:clamp(12px,2vh,24px);animation:up .5s ease both}
+  margin-bottom:2vh;animation:up .5s ease both}
 .logo-halo{position:absolute;top:50%;left:50%;transform:translate(-50%,-56%);
-  width:clamp(170px,20vw,280px);height:clamp(170px,20vw,280px);border-radius:50%;
-  background:radial-gradient(circle,rgba(0,255,80,.22) 0%,transparent 65%);
+  width:28vh;height:28vh;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,255,80,.25) 0%,transparent 65%);
   animation:halo 4s ease-in-out infinite alternate;pointer-events:none}
-@keyframes halo{from{opacity:.6;transform:translate(-50%,-56%) scale(.9)}to{opacity:1;transform:translate(-50%,-56%) scale(1.1)}}
-.logo-wrap{position:relative;
-  width:clamp(100px,12vw,160px);
-  height:clamp(100px,12vw,160px)}
+@keyframes halo{from{transform:translate(-50%,-56%) scale(.9);opacity:.6}to{transform:translate(-50%,-56%) scale(1.1);opacity:1}}
+.logo-wrap{position:relative;width:16vh;height:16vh;min-width:90px;min-height:90px}
 .l-spin{position:absolute;inset:-5px;border-radius:50%;
   background:conic-gradient(#00ff55 0deg,#ffd700 85deg,#ff3349 175deg,#00ff55 360deg);
   animation:spin 3.5s linear infinite}
@@ -63,138 +61,160 @@ canvas.ptc{position:absolute;inset:0}
 .l-img{position:absolute;inset:7px;border-radius:50%;overflow:hidden}
 .l-img img{width:100%;height:100%;object-fit:cover}
 .l-glow{position:absolute;inset:-2px;border-radius:50%;
-  box-shadow:0 0 clamp(20px,3vw,45px) rgba(0,255,80,.4),0 0 clamp(40px,5vw,80px) rgba(0,255,80,.1);
-  pointer-events:none}
-.king-tag{margin-top:clamp(5px,1vh,10px);
+  box-shadow:0 0 35px rgba(0,255,80,.4),0 0 70px rgba(0,255,80,.12);pointer-events:none}
+.king-tag{margin-top:1vh;
   background:linear-gradient(135deg,#ffd700,#ffaa00,#ff8c00);
-  color:#000;font-size:clamp(8px,.9vw,11px);font-weight:800;
-  padding:clamp(3px,.4vh,6px) clamp(14px,1.5vw,22px);border-radius:20px;
-  letter-spacing:2px;box-shadow:0 0 20px rgba(255,200,0,.5),0 4px 12px rgba(0,0,0,.5)}
+  color:#000;font-size:max(9px,1.1vh);font-weight:800;
+  padding:.5vh 2vw;border-radius:20px;letter-spacing:2px;
+  box-shadow:0 0 20px rgba(255,200,0,.55),0 4px 12px rgba(0,0,0,.5)}
 
-/* ════════ TITLE ════════ */
-.title-area{text-align:center;margin-bottom:clamp(4px,.8vh,10px);animation:up .5s .07s ease both}
+/* ── TITLE ── */
+.title-area{text-align:center;margin-bottom:1.5vh;animation:up .5s .07s ease both}
 .title-area h1{
-  font-size:clamp(36px,6vw,88px);
-  font-weight:900;line-height:1;letter-spacing:clamp(-1px,-.5vw,-2px);
-  text-shadow:0 0 60px rgba(0,255,80,.18)}
+  font-size:max(36px,8.5vh);
+  font-weight:900;line-height:.95;letter-spacing:-2px;
+  text-shadow:0 0 80px rgba(0,255,80,.2)}
 .tg{color:#00ff55}.tw{color:#fff}.tr{color:#ff3349}
-.sub1{font-size:clamp(9px,1vw,13px);font-weight:600;letter-spacing:clamp(2px,.4vw,5px);
-  color:rgba(255,255,255,.3);text-transform:uppercase;margin-top:clamp(4px,.6vh,8px)}
+.sub1{font-size:max(9px,1.2vh);font-weight:600;letter-spacing:4px;
+  color:rgba(255,255,255,.3);text-transform:uppercase;margin-top:1vh}
 
-/* ════════ TAGLINE ════════ */
-.tagline{padding:clamp(7px,1vh,12px) clamp(18px,2.5vw,36px);border-radius:50px;
+/* ── TAGLINE ── */
+.tagline{padding:.9vh 2.5vw;border-radius:50px;
   background:linear-gradient(135deg,rgba(0,255,80,.08),rgba(0,255,80,.03));
   border:1px solid rgba(0,255,80,.18);
-  font-size:clamp(10px,1.1vw,15px);font-weight:600;color:rgba(255,255,255,.6);
-  text-align:center;letter-spacing:.3px;
-  margin-bottom:clamp(10px,1.5vh,20px);animation:up .5s .12s ease both}
+  font-size:max(10px,1.4vh);font-weight:600;color:rgba(255,255,255,.6);
+  letter-spacing:.3px;margin-bottom:2vh;animation:up .5s .12s ease both}
 .tagline span{color:#00ff55;font-weight:700}
 
-/* ════════ STATS ════════ */
-.stats{display:flex;gap:clamp(8px,1vw,16px);margin-bottom:clamp(10px,1.5vh,18px);animation:up .5s .16s ease both}
+/* ── STATS ── */
+.stats{display:flex;gap:1.2vw;margin-bottom:1.8vh;animation:up .5s .16s ease both}
 .stat{position:relative;
-  padding:clamp(10px,1.4vh,18px) clamp(16px,2vw,30px);
-  text-align:center;border-radius:clamp(12px,1.2vw,18px);overflow:hidden;
-  background:rgba(255,255,255,.03);border:1px solid rgba(0,255,80,.14);
-  transition:.25s;cursor:default}
-.stat:hover{transform:translateY(-5px);border-color:rgba(0,255,80,.4);
-  box-shadow:0 10px 35px rgba(0,255,80,.15);background:rgba(0,255,80,.06)}
+  padding:1.4vh 2.5vw;text-align:center;
+  border-radius:16px;overflow:hidden;
+  background:rgba(255,255,255,.03);border:1px solid rgba(0,255,80,.15);
+  transition:.25s;cursor:default;min-width:100px}
+.stat:hover{transform:translateY(-5px);border-color:rgba(0,255,80,.45);
+  box-shadow:0 12px 40px rgba(0,255,80,.16);background:rgba(0,255,80,.07)}
 .stat::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;
-  background:linear-gradient(90deg,transparent,rgba(0,255,80,.55),transparent)}
+  background:linear-gradient(90deg,transparent,rgba(0,255,80,.6),transparent)}
 .stat::after{content:'';position:absolute;inset:0;
   background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.045) 50%,transparent 70%);
   animation:sh 3.2s ease-in-out infinite}
 .stat:nth-child(2)::after{animation-delay:1s}
 .stat:nth-child(3)::after{animation-delay:2s}
 @keyframes sh{0%,100%{opacity:0;transform:translateX(-100%)}50%{opacity:1;transform:translateX(100%)}}
-.sn{display:block;font-size:clamp(20px,2.8vw,40px);font-weight:900;color:#00ff55;
-  line-height:1.1;text-shadow:0 0 24px rgba(0,255,80,.5)}
-.sl{font-size:clamp(8px,.8vw,11px);font-weight:600;letter-spacing:clamp(1px,.2vw,2.5px);
-  color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px}
+.sn{display:block;font-size:max(22px,3.8vh);font-weight:900;color:#00ff55;
+  line-height:1;text-shadow:0 0 28px rgba(0,255,80,.55)}
+.sl{font-size:max(8px,1vh);font-weight:600;letter-spacing:1.8px;
+  color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:.3vh}
 
-/* ════════ PROOF ════════ */
-.proof{display:flex;align-items:center;justify-content:center;gap:clamp(5px,.8vw,12px);
-  margin-bottom:clamp(10px,1.5vh,18px);animation:up .5s .2s ease both}
+/* ── PROOF ── */
+.proof{display:flex;align-items:center;justify-content:center;gap:1vw;
+  margin-bottom:1.8vh;animation:up .5s .2s ease both}
 .proof-item{display:flex;align-items:center;gap:5px;
-  font-size:clamp(9px,.9vw,12px);font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.3px}
-.stars{color:#ffd700;font-size:clamp(11px,1.1vw,15px);letter-spacing:-1px}
+  font-size:max(9px,1.15vh);font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.3px}
+.stars{color:#ffd700;font-size:max(11px,1.4vh);letter-spacing:-1px}
 .pdot{width:4px;height:4px;border-radius:50%;background:rgba(0,255,80,.4)}
 
-/* ════════ FEATURES ════════ */
-.feats{display:flex;gap:clamp(6px,.8vw,14px);margin-bottom:clamp(14px,2.2vh,26px);animation:up .5s .24s ease both;flex-wrap:wrap;justify-content:center}
-.feat{display:flex;flex-direction:column;align-items:center;gap:clamp(3px,.5vh,6px);
-  padding:clamp(9px,1.2vh,16px) clamp(12px,1.5vw,22px);
-  border-radius:clamp(12px,1.2vw,18px);
+/* ── FEATS ── */
+.feats{display:flex;gap:1vw;margin-bottom:2.2vh;animation:up .5s .24s ease both}
+.feat{display:flex;flex-direction:column;align-items:center;gap:.5vh;
+  padding:1.2vh 1.8vw;border-radius:16px;
   border:1px solid rgba(0,255,80,.1);background:rgba(0,255,80,.03);
-  transition:.22s;cursor:default;min-width:clamp(72px,8vw,110px)}
+  transition:.22s;cursor:default;min-width:80px}
 .feat:hover{border-color:rgba(0,255,80,.38);background:rgba(0,255,80,.08);transform:translateY(-4px)}
-.fi{font-size:clamp(18px,2.2vw,30px)}
-.ft{font-size:clamp(9px,.9vw,12px);font-weight:700;color:rgba(255,255,255,.8);text-align:center;letter-spacing:.2px}
+.fi{font-size:max(20px,2.6vh)}
+.ft{font-size:max(9px,1.1vh);font-weight:700;color:rgba(255,255,255,.8);text-align:center}
 
-/* ════════ CTA ════════ */
-.cta-area{display:flex;flex-direction:column;align-items:center;gap:clamp(7px,1vh,12px);
-  margin-bottom:clamp(10px,1.5vh,18px);animation:up .5s .28s ease both}
+/* ── CTA ── */
+.cta-area{display:flex;flex-direction:column;align-items:center;gap:1vh;
+  margin-bottom:1.8vh;animation:up .5s .28s ease both}
 .pulse-wrap{position:relative;display:inline-flex}
-.pulse-wrap::before,.pulse-wrap::after{content:'';position:absolute;inset:-7px;border-radius:50px;border:1.5px solid rgba(0,255,80,.25);animation:pulse 2.4s ease-in-out infinite}
-.pulse-wrap::after{inset:-15px;border-color:rgba(0,255,80,.12);animation-delay:.6s}
+.pulse-wrap::before,.pulse-wrap::after{content:'';position:absolute;inset:-8px;border-radius:50px;
+  border:1.5px solid rgba(0,255,80,.25);animation:pulse 2.4s ease-in-out infinite}
+.pulse-wrap::after{inset:-16px;border-color:rgba(0,255,80,.12);animation-delay:.6s}
 @keyframes pulse{0%,100%{opacity:0;transform:scale(.97)}50%{opacity:1;transform:scale(1.02)}}
-.cta{position:relative;display:inline-flex;align-items:center;gap:clamp(10px,1vw,16px);
-  padding:clamp(14px,1.8vh,22px) clamp(32px,4vw,60px);
+.cta{position:relative;display:inline-flex;align-items:center;gap:1.2vw;
+  padding:2.4vh 5vw;min-width:min(360px,75vw);max-width:420px;justify-content:center;
   background:linear-gradient(135deg,#00ff55 0%,#00dd44 50%,#00bb38 100%);
   color:#000;text-decoration:none;
-  font-family:'Poppins',sans-serif;font-size:clamp(12px,1.3vw,18px);font-weight:800;
+  font-family:'Poppins',sans-serif;font-size:max(13px,1.7vh);font-weight:800;
   letter-spacing:.8px;text-transform:uppercase;
   border-radius:50px;overflow:hidden;
-  box-shadow:0 0 40px rgba(0,255,80,.45),0 0 90px rgba(0,255,80,.12),0 8px 24px rgba(0,0,0,.5);
-  transition:.25s}
+  box-shadow:0 0 45px rgba(0,255,80,.5),0 0 100px rgba(0,255,80,.13),0 8px 28px rgba(0,0,0,.5);
+  transition:.25s;white-space:nowrap}
 .cta::before{content:'';position:absolute;top:0;left:-120%;width:70%;height:100%;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
   animation:sheen 2.5s ease-in-out infinite}
 @keyframes sheen{0%,100%{left:-120%}60%{left:140%}}
+@keyframes zoomPulse{
+  0%  {transform:scale(1);    box-shadow:0 0 45px rgba(0,255,80,.5),0 0 100px rgba(0,255,80,.13),0 8px 28px rgba(0,0,0,.5)}
+  50% {transform:scale(1.06); box-shadow:0 0 70px rgba(0,255,80,.75),0 0 140px rgba(0,255,80,.22),0 14px 36px rgba(0,0,0,.6)}
+  100%{transform:scale(1);    box-shadow:0 0 45px rgba(0,255,80,.5),0 0 100px rgba(0,255,80,.13),0 8px 28px rgba(0,0,0,.5)}
+}
+.cta{animation:zoomPulse 2s ease-in-out infinite!important}
 .cta:hover{transform:translateY(-4px) scale(1.04);
-  box-shadow:0 0 60px rgba(0,255,80,.65),0 0 130px rgba(0,255,80,.18),0 12px 30px rgba(0,0,0,.6)}
-.cta svg{width:clamp(18px,2vw,26px);height:clamp(18px,2vw,26px);flex-shrink:0}
-.cta-sub{font-size:clamp(8.5px,.85vw,11.5px);font-weight:500;letter-spacing:2.5px;
+  box-shadow:0 0 65px rgba(0,255,80,.7),0 0 140px rgba(0,255,80,.2),0 14px 35px rgba(0,0,0,.6)}
+.cta svg{width:max(18px,2.2vh);height:max(18px,2.2vh);flex-shrink:0}
+.cta-sub{font-size:max(8.5px,1vh);font-weight:500;letter-spacing:2.5px;
   color:rgba(255,255,255,.18);text-transform:uppercase}
 
-/* ════════ DISCLAIMER ════════ */
-.disc{padding:clamp(7px,1vh,12px) clamp(18px,2.5vw,30px);
+/* ── DISCLAIMER ── */
+.disc{padding:.9vh 2vw;
   border:1px dashed rgba(255,200,0,.16);border-radius:10px;
   background:rgba(255,200,0,.02);
-  font-size:clamp(8.5px,.85vw,11px);color:rgba(255,255,255,.2);
-  text-align:center;max-width:min(480px,90vw);line-height:1.6;
+  font-size:max(8.5px,1vh);color:rgba(255,255,255,.2);
+  text-align:center;max-width:min(520px,88vw);line-height:1.6;
   animation:up .5s .32s ease both}
 .disc b{color:rgba(255,200,0,.5)}
 
-/* ════════ FOOTER ════════ */
+/* ── FOOTER ── */
 footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
-  padding:clamp(7px,1vh,11px) 20px;
+  padding:max(7px,1vh) 20px;
   display:flex;align-items:center;justify-content:center;
   background:rgba(1,12,4,.96);border-top:1px solid rgba(0,255,80,.07)}
-.credit{font-size:clamp(10px,.9vw,13px);font-weight:500;color:rgba(255,255,255,.2)}
+.credit{font-size:max(10px,1.15vh);font-weight:500;color:rgba(255,255,255,.2)}
 .credit a{color:#00ff55;font-weight:700;text-decoration:none;transition:.2s}
 .credit a:hover{color:#fff;text-shadow:0 0 12px rgba(0,255,80,.6)}
 
 @keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
-/* ════════ MOBILE ════════ */
+/* ── MOBILE (<600px) ── */
 @media(max-width:600px){
-  .tagline{font-size:11px;padding:7px 16px}
-  .proof .proof-item:last-child{display:none}
-  .feats{gap:6px}
-  .feat{min-width:64px;padding:8px 10px}
-  .ft{font-size:9px}
-  .cta{padding:14px 28px;font-size:13px}
+  .page{padding:34px 16px 34px;row-gap:0}
+  .logo-area{margin-bottom:10px}
+  .logo-wrap{width:90px!important;height:90px!important;min-width:90px!important;min-height:90px!important}
+  .logo-halo{width:160px!important;height:160px!important}
+  .king-tag{font-size:9px;padding:3px 14px;margin-top:6px}
+  .title-area{margin-bottom:8px}
+  .title-area h1{font-size:36px!important;letter-spacing:-1px}
+  .sub1{font-size:9px;letter-spacing:2.5px;margin-top:5px}
+  .tagline{font-size:11px;padding:7px 16px;margin-bottom:10px}
+  .stats{gap:7px;margin-bottom:10px}
+  .stat{padding:9px 14px;border-radius:12px;min-width:80px}
+  .sn{font-size:20px!important}
+  .sl{font-size:8px;letter-spacing:1px}
+  .proof{margin-bottom:10px;gap:6px}
+  .proof-item{font-size:9px}
+  .stars{font-size:11px}
+  .feats{gap:6px;margin-bottom:12px}
+  .feat{padding:8px 10px;min-width:60px;border-radius:12px}
+  .fi{font-size:18px!important}
+  .ft{font-size:9px!important}
+  .cta{padding:14px 44px;font-size:13px!important}
+  .cta svg{width:18px!important;height:18px!important}
+  .cta-sub{font-size:8.5px;letter-spacing:1.5px}
+  .cta-area{margin-bottom:10px;gap:7px}
+  .disc{font-size:8.5px;padding:7px 14px}
 }
 
-/* very short screens */
-@media(max-height:680px){
-  .logo-wrap{width:80px!important;height:80px!important}
-  .logo-halo{display:none}
+/* very short phone */
+@media(max-height:680px) and (max-width:600px){
   .tagline{display:none}
   .proof{display:none}
   .disc{display:none}
-  .feats{margin-bottom:12px}
+  .logo-area{margin-bottom:6px}
+  .title-area{margin-bottom:6px}
 }
 </style>
 </head>
@@ -203,11 +223,10 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
 <div class="bg">
   <div class="bg-aurora"></div>
   <div class="bg-grid"></div>
-  <canvas class="ptc" id="c"></canvas>
+  <canvas id="c"></canvas>
   <div class="bg-cg"></div>
 </div>
 
-<!-- TICKER -->
 <div class="ticker">
   <div class="t-track">
     <span class="ti up">NIFTY 50 ▲ +1.24%</span><span class="ti dn">BANKNIFTY ▼ −0.87%</span><span class="ti up">SENSEX ▲ +0.96%</span><span class="ti up">RELIANCE ▲ +2.10%</span><span class="ti dn">TCS ▼ −0.43%</span><span class="ti up">GOLD ▲ +0.78%</span><span class="ti dn">INFY ▼ −1.10%</span><span class="ti up">HDFC ▲ +0.55%</span><span class="ti up">WIPRO ▲ +1.30%</span><span class="ti dn">SBIN ▼ −0.62%</span>
@@ -215,10 +234,8 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
   </div>
 </div>
 
-<!-- PAGE -->
 <div class="page">
 
-  <!-- Logo -->
   <div class="logo-area">
     <div class="logo-halo"></div>
     <div class="logo-wrap">
@@ -230,25 +247,19 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
     <div class="king-tag">👑 KING CHANNEL</div>
   </div>
 
-  <!-- Title -->
   <div class="title-area">
     <h1><span class="tg">TRADING</span> <span class="tw">WITH</span> <span class="tr">GURU</span></h1>
     <div class="sub1">Premium Stock Market Intelligence</div>
   </div>
 
-  <!-- Tagline -->
-  <div class="tagline">
-    🔥 <span>4,000+ traders</span> already making smarter decisions — join free today!
-  </div>
+  <div class="tagline">🔥 <span>4,000+ traders</span> already making smarter decisions — join free today!</div>
 
-  <!-- Stats -->
   <div class="stats">
     <div class="stat"><span class="sn">4K+</span><span class="sl">Members</span></div>
     <div class="stat"><span class="sn">DAILY</span><span class="sl">Research Calls</span></div>
     <div class="stat"><span class="sn">100%</span><span class="sl">Free to Join</span></div>
   </div>
 
-  <!-- Social Proof -->
   <div class="proof">
     <div class="proof-item"><span class="stars">★★★★★</span></div>
     <div class="pdot"></div>
@@ -257,7 +268,6 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
     <div class="proof-item">Updated every trading day</div>
   </div>
 
-  <!-- Features -->
   <div class="feats">
     <div class="feat"><div class="fi">📊</div><div class="ft">Nifty Calls</div></div>
     <div class="feat"><div class="fi">🎯</div><div class="ft">Targets</div></div>
@@ -266,7 +276,6 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
     <div class="feat"><div class="fi">🛡️</div><div class="ft">Risk Levels</div></div>
   </div>
 
-  <!-- CTA -->
   <div class="cta-area">
     <div class="pulse-wrap">
       <a class="cta" href="https://t.me/+yzID2f9Sd7g5ZDY1" target="_blank">
@@ -277,20 +286,17 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
     <div class="cta-sub">✦ Free Access &nbsp;·&nbsp; No Spam &nbsp;·&nbsp; 4,158+ Members ✦</div>
   </div>
 
-  <!-- Disclaimer -->
   <div class="disc"><b>⚠ Disclaimer:</b> All research calls are strictly for <b>educational purposes only</b>. Not SEBI registered. Trade at your own risk.</div>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="credit">Ads managed by <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank">@Nexgroww_agency</a></div>
 </footer>
 
 <script>
-const canvas=document.getElementById('c');
-const ctx=canvas.getContext('2d');
-let W=canvas.width=window.innerWidth,H=canvas.height=window.innerHeight;
+const c=document.getElementById('c'),ctx=c.getContext('2d');
+let W=c.width=innerWidth,H=c.height=innerHeight;
 const cols=['0,255,80','0,255,80','255,51,73','255,200,0'];
 const pts=Array.from({length:70},()=>({
   x:Math.random()*W,y:Math.random()*H,
@@ -305,14 +311,13 @@ const pts=Array.from({length:70},()=>({
     ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
     ctx.fillStyle=`rgba(${p.col},${p.op})`;
     ctx.shadowBlur=10;ctx.shadowColor=`rgba(${p.col},.5)`;
-    ctx.fill();
-    p.x+=p.dx;p.y+=p.dy;
+    ctx.fill();p.x+=p.dx;p.y+=p.dy;
     if(p.y<-5){p.y=H+5;p.x=Math.random()*W}
     if(p.x<0||p.x>W)p.dx*=-1;
   });
   requestAnimationFrame(draw);
 })();
-window.addEventListener('resize',()=>{W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight});
+window.addEventListener('resize',()=>{W=c.width=innerWidth;H=c.height=innerHeight});
 </script>
 </body>
 </html>
