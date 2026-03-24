@@ -11,7 +11,6 @@ html{scroll-behavior:smooth}
 body{width:100%;min-height:100vh;overflow-x:hidden;overflow-y:auto;
   cursor:pointer;font-family:'Poppins',sans-serif;background:#010c04;color:#fff}
 
-/* ── BG ── */
 .bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .bg-aurora{position:absolute;inset:0;
   background:
@@ -31,7 +30,6 @@ body{width:100%;min-height:100vh;overflow-x:hidden;overflow-y:auto;
 @keyframes cg{from{transform:translate(-50%,-50%) scale(.88);opacity:.5}to{transform:translate(-50%,-50%) scale(1.1);opacity:1}}
 canvas{position:absolute;inset:0}
 
-/* ── TICKER ── */
 .ticker{position:fixed;top:0;left:0;right:0;z-index:300;
   height:28px;overflow:hidden;
   background:rgba(1,12,4,.98);border-bottom:1px solid rgba(0,255,80,.1);
@@ -41,17 +39,15 @@ canvas{position:absolute;inset:0}
 .ti{padding:0 20px;font-size:9.5px;font-weight:600;letter-spacing:1px}
 .ti.up{color:#00ff55}.ti.dn{color:#ff3349}
 
-/* ── PAGE ── */
 .page{position:relative;z-index:10;min-height:100vh;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:50px 16px 48px;gap:0}
+  padding:50px 16px 58px;gap:0}
 
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.05s}.d2{transition-delay:.14s}.d3{transition-delay:.23s}
 .d4{transition-delay:.32s}.d5{transition-delay:.41s}.d6{transition-delay:.50s}.d7{transition-delay:.59s}
 
-/* ── LOGO ── */
 .logo-area{position:relative;display:flex;flex-direction:column;align-items:center;margin-bottom:12px}
 .logo-halo{position:absolute;top:50%;left:50%;transform:translate(-50%,-56%);
   width:190px;height:190px;border-radius:50%;
@@ -74,7 +70,6 @@ canvas{position:absolute;inset:0}
   padding:3px 14px;border-radius:20px;letter-spacing:2px;
   box-shadow:0 0 18px rgba(255,200,0,.5),0 3px 10px rgba(0,0,0,.5)}
 
-/* ── TITLE ── */
 .title-area{text-align:center;margin-bottom:10px}
 .title-area h1{font-size:clamp(32px,8.5vw,64px);font-weight:900;line-height:.95;letter-spacing:-2px;
   text-shadow:0 0 70px rgba(0,255,80,.18)}
@@ -82,7 +77,6 @@ canvas{position:absolute;inset:0}
 .sub1{font-size:clamp(8px,2vw,11px);font-weight:600;letter-spacing:4px;
   color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:7px}
 
-/* ── TAGLINE ── */
 .tagline{padding:8px 18px;border-radius:50px;
   background:linear-gradient(135deg,rgba(0,255,80,.07),rgba(0,255,80,.02));
   border:1px solid rgba(0,255,80,.16);
@@ -90,7 +84,6 @@ canvas{position:absolute;inset:0}
   letter-spacing:.2px;margin-bottom:13px}
 .tagline span{color:#00ff55;font-weight:700}
 
-/* ── STATS ── */
 .stats{display:flex;gap:8px;margin-bottom:11px;flex-wrap:wrap;justify-content:center}
 .stat{position:relative;padding:9px 16px;text-align:center;
   border-radius:14px;overflow:hidden;
@@ -111,7 +104,6 @@ canvas{position:absolute;inset:0}
 .sl{font-size:clamp(7px,1.8vw,9px);font-weight:600;letter-spacing:1.5px;
   color:rgba(255,255,255,.25);text-transform:uppercase;margin-top:2px}
 
-/* ── PROOF ── */
 .proof{display:flex;align-items:center;justify-content:center;gap:8px;
   margin-bottom:11px;flex-wrap:wrap}
 .proof-item{display:flex;align-items:center;gap:4px;
@@ -119,8 +111,7 @@ canvas{position:absolute;inset:0}
 .stars{color:#ffd700;font-size:clamp(10px,2.5vw,12px);letter-spacing:-1px}
 .pdot{width:3px;height:3px;border-radius:50%;background:rgba(0,255,80,.35)}
 
-/* ── FEATS ── */
-.feats{display:flex;gap:7px;margin-bottom:14px;flex-wrap:wrap;justify-content:center}
+.feats{display:flex;gap:7px;margin-bottom:20px;flex-wrap:wrap;justify-content:center}
 .feat{display:flex;flex-direction:column;align-items:center;gap:4px;
   padding:8px 10px;border-radius:13px;
   border:1px solid rgba(0,255,80,.1);background:rgba(0,255,80,.025);
@@ -129,53 +120,153 @@ canvas{position:absolute;inset:0}
 .fi{font-size:clamp(17px,4vw,21px)}
 .ft{font-size:clamp(8px,2vw,9.5px);font-weight:700;color:rgba(255,255,255,.75);text-align:center;white-space:nowrap}
 
-/* ── CTA ── */
-.cta-area{display:flex;flex-direction:column;align-items:center;gap:9px;margin-bottom:12px}
-.cta-row{display:flex;gap:10px;width:min(440px,90vw)}
+/* ═══════════════════════════════════
+   PREMIUM BUTTONS
+═══════════════════════════════════ */
+.cta-area{display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:14px;width:100%}
 
-.cta{position:relative;flex:1;overflow:hidden;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
-  padding:11px 10px;border-radius:16px;text-decoration:none;
-  background:linear-gradient(135deg,#00ff55 0%,#00e04c 55%,#00c040 100%);
-  color:#000;
-  box-shadow:0 0 26px rgba(0,255,80,.48),0 4px 16px rgba(0,0,0,.44);
+.btn-group{
+  position:relative;
+  display:flex;flex-direction:column;gap:10px;
+  width:min(430px,93vw);
+}
+
+/* Outer glow ring */
+.btn-group::before{
+  content:'';
+  position:absolute;inset:-8px;
+  border-radius:24px;
+  border:1px solid rgba(0,255,80,.12);
+  animation:outerRing 3s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes outerRing{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.008)}}
+
+/* ── TELEGRAM BUTTON ── */
+.btn-tg{
+  position:relative;
+  display:flex;align-items:stretch;
+  height:68px;
+  border-radius:20px;
+  text-decoration:none;
+  overflow:hidden;
+  background:linear-gradient(135deg,#00ff55 0%,#00d94a 45%,#00b83c 100%);
+  box-shadow:
+    0 0 0 1.5px rgba(0,255,80,.6),
+    0 10px 36px rgba(0,255,80,.5),
+    0 3px 10px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.3),
+    inset 0 -1px 0 rgba(0,0,0,.15);
+  animation:tgGlow 2s ease-in-out infinite;
   transition:transform .2s,box-shadow .2s;
-  animation:zpTg 2s ease-in-out infinite}
-@keyframes zpTg{
-  0%,100%{transform:scale(1);box-shadow:0 0 26px rgba(0,255,80,.48),0 4px 16px rgba(0,0,0,.44)}
-  50%{transform:scale(1.04);box-shadow:0 0 48px rgba(0,255,80,.7),0 7px 22px rgba(0,0,0,.55)}}
-.cta::before{content:'';position:absolute;top:0;left:-120%;width:55%;height:100%;
+}
+@keyframes tgGlow{
+  0%,100%{box-shadow:0 0 0 1.5px rgba(0,255,80,.6),0 10px 36px rgba(0,255,80,.5),0 3px 10px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.15)}
+  50%{box-shadow:0 0 0 2px rgba(0,255,80,.9),0 16px 55px rgba(0,255,80,.75),0 5px 18px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.15),0 0 80px rgba(0,255,80,.2)}
+}
+.btn-tg:hover{transform:translateY(-4px) scale(1.03);animation-play-state:paused;
+  box-shadow:0 0 0 2px rgba(0,255,80,1),0 20px 65px rgba(0,255,80,.8),0 8px 24px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn-tg:active{transform:scale(.97)}
+/* Sheen */
+.btn-tg::after{
+  content:'';position:absolute;top:0;left:-130%;
+  width:55%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.38),transparent);
+  animation:sheen 2.4s ease-in-out infinite;pointer-events:none;
+}
+@keyframes sheen{0%,100%{left:-130%}58%{left:150%}}
+
+.btn-tg .b-left{
+  display:flex;align-items:center;justify-content:center;
+  width:62px;flex-shrink:0;
+  background:rgba(0,0,0,.16);
+  border-right:1px solid rgba(255,255,255,.18);
+}
+.btn-tg .b-left svg{width:28px;height:28px;fill:#001a08;drop-shadow:0 0 6px rgba(0,0,0,.3)}
+.btn-tg .b-mid{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  flex:1;gap:2px;
+}
+.btn-tg .b-top{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,25,10,.6);line-height:1}
+.btn-tg .b-bot{font-size:clamp(14px,3.8vw,18px);font-weight:900;letter-spacing:.3px;text-transform:uppercase;color:#001a08;line-height:1.1}
+.btn-tg .b-right{
+  display:flex;align-items:center;justify-content:center;
+  width:48px;flex-shrink:0;
+  background:rgba(0,0,0,.12);
+  border-left:1px solid rgba(255,255,255,.14);
+  font-size:22px;color:rgba(0,25,10,.4);font-weight:300;
+}
+/* HOT badge */
+.hot-badge{
+  position:absolute;top:-1px;right:16px;
+  background:linear-gradient(135deg,#ff2744,#cc1228);
+  color:#fff;font-size:8px;font-weight:900;
+  padding:3px 11px;border-radius:0 0 12px 12px;
+  letter-spacing:1.5px;text-transform:uppercase;
+  box-shadow:0 4px 14px rgba(255,39,68,.55);
+  animation:badgeDrop .5s cubic-bezier(.34,1.56,.64,1) .9s both;
+}
+@keyframes badgeDrop{from{transform:translateY(-110%);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* ── WHATSAPP BUTTON ── */
+.btn-wa{
+  position:relative;
+  display:flex;align-items:stretch;
+  height:68px;
+  border-radius:20px;
+  text-decoration:none;
+  overflow:hidden;
+  background:linear-gradient(135deg,#25D366 0%,#1ab954 45%,#0e8a6e 100%);
+  box-shadow:
+    0 0 0 1.5px rgba(37,211,102,.55),
+    0 10px 32px rgba(37,211,102,.42),
+    0 3px 10px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.25),
+    inset 0 -1px 0 rgba(0,0,0,.12);
+  animation:waGlow 2.3s ease-in-out infinite .35s;
+  transition:transform .2s,box-shadow .2s;
+}
+@keyframes waGlow{
+  0%,100%{box-shadow:0 0 0 1.5px rgba(37,211,102,.55),0 10px 32px rgba(37,211,102,.42),0 3px 10px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.25),inset 0 -1px 0 rgba(0,0,0,.12)}
+  50%{box-shadow:0 0 0 2px rgba(37,211,102,.8),0 16px 50px rgba(37,211,102,.65),0 5px 18px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.25),inset 0 -1px 0 rgba(0,0,0,.12),0 0 70px rgba(37,211,102,.18)}
+}
+.btn-wa:hover{transform:translateY(-4px) scale(1.03);animation-play-state:paused;
+  box-shadow:0 0 0 2px rgba(37,211,102,1),0 20px 60px rgba(37,211,102,.7),0 8px 24px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn-wa:active{transform:scale(.97)}
+.btn-wa::after{
+  content:'';position:absolute;top:0;left:-130%;
+  width:55%;height:100%;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
-  animation:sheen 2.4s ease-in-out infinite}
-@keyframes sheen{0%,100%{left:-120%}60%{left:140%}}
-.cta:hover{transform:translateY(-3px) scale(1.05)!important;animation-play-state:paused}
-.cta-icon{display:flex;align-items:center;gap:5px}
-.cta-icon svg{width:17px;height:17px;flex-shrink:0}
-.cta-tag{font-size:clamp(8px,2vw,10px);font-weight:800;letter-spacing:.8px;text-transform:uppercase;line-height:1;opacity:.85}
-.cta-main{font-size:clamp(11px,2.8vw,14px);font-weight:900;letter-spacing:.4px;text-transform:uppercase;line-height:1}
+  animation:sheen 2.8s ease-in-out infinite .5s;pointer-events:none;
+}
+.btn-wa .b-left{
+  display:flex;align-items:center;justify-content:center;
+  width:62px;flex-shrink:0;
+  background:rgba(0,0,0,.14);
+  border-right:1px solid rgba(255,255,255,.14);
+}
+.btn-wa .b-left svg{width:28px;height:28px;fill:#fff}
+.btn-wa .b-mid{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  flex:1;gap:2px;
+}
+.btn-wa .b-top{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.65);line-height:1}
+.btn-wa .b-bot{font-size:clamp(14px,3.8vw,18px);font-weight:900;letter-spacing:.3px;text-transform:uppercase;color:#fff;line-height:1.1}
+.btn-wa .b-right{
+  display:flex;align-items:center;justify-content:center;
+  width:48px;flex-shrink:0;
+  background:rgba(0,0,0,.1);
+  border-left:1px solid rgba(255,255,255,.1);
+  font-size:22px;color:rgba(255,255,255,.4);font-weight:300;
+}
 
-.cta-wa{position:relative;flex:1;overflow:hidden;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
-  padding:11px 10px;border-radius:16px;text-decoration:none;
-  background:linear-gradient(135deg,#25D366 0%,#1ab855 55%,#128C7E 100%);
-  color:#fff;
-  box-shadow:0 0 20px rgba(37,211,102,.4),0 4px 16px rgba(0,0,0,.44);
-  transition:transform .2s,box-shadow .2s;
-  animation:zpWa 2.2s ease-in-out infinite .3s}
-@keyframes zpWa{
-  0%,100%{transform:scale(1);box-shadow:0 0 20px rgba(37,211,102,.4),0 4px 16px rgba(0,0,0,.44)}
-  50%{transform:scale(1.04);box-shadow:0 0 42px rgba(37,211,102,.62),0 7px 22px rgba(0,0,0,.55)}}
-.cta-wa::before{content:'';position:absolute;top:0;left:-120%;width:55%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
-  animation:sheen 2.7s ease-in-out infinite .35s}
-.cta-wa:hover{transform:translateY(-3px) scale(1.05)!important;animation-play-state:paused}
-.wa-icon{display:flex;align-items:center;gap:5px}
-.wa-icon svg{width:17px;height:17px;flex-shrink:0}
-.wa-tag{font-size:clamp(8px,2vw,10px);font-weight:800;letter-spacing:.8px;text-transform:uppercase;line-height:1;opacity:.9}
-.wa-main{font-size:clamp(11px,2.8vw,14px);font-weight:900;letter-spacing:.4px;text-transform:uppercase;line-height:1}
-
-.cta-sub{font-size:clamp(7.5px,1.8vw,9px);font-weight:500;letter-spacing:2px;
-  color:rgba(255,255,255,.17);text-transform:uppercase;text-align:center}
+/* Subtext */
+.cta-sub{
+  display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:center;
+  font-size:clamp(7.5px,1.8vw,9px);font-weight:600;letter-spacing:1.8px;
+  color:rgba(255,255,255,.18);text-transform:uppercase;text-align:center;
+}
+.cta-sub .cdot{color:rgba(0,255,80,.28);font-size:11px;line-height:1}
 
 /* ── DISCLAIMER ── */
 .disc{padding:7px 14px;border:1px dashed rgba(255,200,0,.14);border-radius:10px;
@@ -184,7 +275,6 @@ canvas{position:absolute;inset:0}
   text-align:center;max-width:min(500px,88vw);line-height:1.6}
 .disc b{color:rgba(255,200,0,.45)}
 
-/* ── FOOTER ── */
 footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
   padding:7px 20px;
   display:flex;align-items:center;justify-content:center;
@@ -193,9 +283,8 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
 .credit a{color:#00ff55;font-weight:700;text-decoration:none;transition:.2s}
 .credit a:hover{color:#fff}
 
-/* ── PHONE ── */
 @media(max-width:480px){
-  .page{padding:44px 12px 46px}
+  .page{padding:44px 12px 56px}
   .logo-area{margin-bottom:8px}
   .logo-wrap{width:78px;height:78px}
   .logo-halo{width:155px;height:155px}
@@ -206,19 +295,20 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
   .stats{gap:6px;margin-bottom:9px}
   .stat{padding:7px 10px;min-width:80px;border-radius:11px}
   .proof{margin-bottom:8px;gap:5px}
-  .feats{gap:5px;margin-bottom:11px}
+  .feats{gap:5px;margin-bottom:14px}
   .feat{padding:7px 7px;min-width:50px;border-radius:10px}
-  .cta-row{width:92vw;gap:7px}
-  .cta,.cta-wa{padding:10px 6px;border-radius:13px}
-  .cta-icon svg,.wa-icon svg{width:15px;height:15px}
-  .cta-tag,.wa-tag{font-size:8px;letter-spacing:.5px}
-  .cta-main,.wa-main{font-size:11px}
-  .cta-area{gap:7px;margin-bottom:9px}
+  .btn-group{width:95vw;gap:9px}
+  .btn-tg,.btn-wa{height:62px;border-radius:16px}
+  .btn-tg .b-left,.btn-wa .b-left{width:54px}
+  .btn-tg .b-right,.btn-wa .b-right{width:42px;font-size:19px}
+  .btn-tg .b-left svg,.btn-wa .b-left svg{width:24px;height:24px}
+  .btn-tg .b-bot,.btn-wa .b-bot{font-size:14px}
+  .cta-area{gap:11px;margin-bottom:11px}
   .disc{font-size:7.5px;padding:6px 11px}
 }
 @media(max-height:620px){
   .tagline{display:none}.proof{display:none}.disc{display:none}
-  .logo-area{margin-bottom:5px}.stats{margin-bottom:7px}.feats{margin-bottom:9px}
+  .logo-area{margin-bottom:5px}.stats{margin-bottom:7px}.feats{margin-bottom:10px}
 }
 </style>
 </head>
@@ -231,7 +321,6 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
   <div class="bg-cg"></div>
 </div>
 
-<!-- TICKER — Forex pairs -->
 <div class="ticker">
   <div class="t-track">
     <span class="ti up">EUR/USD ▲ +0.42%</span>
@@ -246,7 +335,6 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
     <span class="ti dn">EUR/GBP ▼ −0.22%</span>
     <span class="ti up">BTC/USD ▲ +2.40%</span>
     <span class="ti dn">USD/INR ▼ −0.14%</span>
-    <!-- duplicate for seamless loop -->
     <span class="ti up">EUR/USD ▲ +0.42%</span>
     <span class="ti dn">GBP/USD ▼ −0.31%</span>
     <span class="ti up">USD/JPY ▲ +0.67%</span>
@@ -264,7 +352,6 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
 
 <div class="page">
 
-  <!-- LOGO -->
   <div class="logo-area reveal d1">
     <div class="logo-halo"></div>
     <div class="logo-wrap">
@@ -278,25 +365,21 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
     <div class="king-tag">💹 TOP FOREX CHANNEL</div>
   </div>
 
-  <!-- TITLE -->
   <div class="title-area reveal d2">
     <h1><span class="tg">Mahadev</span> <span class="tw">Forex</span> <span class="tr">Trading</span></h1>
     <div class="sub1">Premium Forex &amp; Currency Market Signals</div>
   </div>
 
-  <!-- TAGLINE -->
   <div class="tagline reveal d3">
     💰 <span>5,000+ forex traders</span> are already winning — get free signals today!
   </div>
 
-  <!-- STATS -->
   <div class="stats reveal d4">
     <div class="stat"><span class="sn">5K+</span><span class="sl">Members</span></div>
     <div class="stat"><span class="sn">DAILY</span><span class="sl">Forex Signals</span></div>
     <div class="stat"><span class="sn">100%</span><span class="sl">Free to Join</span></div>
   </div>
 
-  <!-- PROOF -->
   <div class="proof reveal d4">
     <div class="proof-item"><span class="stars">★★★★★</span></div>
     <div class="pdot"></div>
@@ -305,7 +388,6 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
     <div class="proof-item">Signals every trading session</div>
   </div>
 
-  <!-- FEATS -->
   <div class="feats reveal d5">
     <div class="feat"><div class="fi">💱</div><div class="ft">Forex Pairs</div></div>
     <div class="feat"><div class="fi">🎯</div><div class="ft">Entry &amp; TP</div></div>
@@ -314,25 +396,38 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
     <div class="feat"><div class="fi">🛡️</div><div class="ft">Stop Loss</div></div>
   </div>
 
-  <!-- CTA -->
+  <!-- ═══ PREMIUM BUTTONS ═══ -->
   <div class="cta-area reveal d6">
-    <div class="cta-row">
+    <div class="btn-group">
 
       <!-- TELEGRAM -->
-      <a class="cta" href="https://t.me/+yFTKx53ZJYI3ZjQ1" target="_blank" onclick="event.stopPropagation()">
-        <div class="cta-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247-2.007 9.455c-.148.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 14.367l-2.97-.927c-.646-.204-.66-.646.136-.956l11.59-4.467c.537-.195 1.007.12.836.956l-.22-.726z"/></svg>
-          <span class="cta-tag">🚀 Join Free on</span>
+      <a class="btn-tg" href="https://t.me/+yFTKx53ZJYI3ZjQ1" target="_blank" onclick="event.stopPropagation()">
+        <div class="hot-badge">🔥 FREE JOIN</div>
+        <div class="b-left">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247-2.007 9.455c-.148.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 14.367l-2.97-.927c-.646-.204-.66-.646.136-.956l11.59-4.467c.537-.195 1.007.12.836.956l-.22-.726z"/></svg>
         </div>
-        <span class="cta-main">Telegram</span>
+        <div class="b-mid">
+          <span class="b-top">🚀 Join Free on</span>
+          <span class="b-bot">Telegram Channel</span>
+        </div>
+        <div class="b-right">›</div>
       </a>
 
+    
 
     </div>
-    <div class="cta-sub">✦ Free Signals &nbsp;·&nbsp; No Spam &nbsp;·&nbsp; 5,000+ Forex Traders ✦</div>
+
+    <div class="cta-sub">
+      <span>✦ Free Signals</span>
+      <span class="cdot">·</span>
+      <span>No Spam</span>
+      <span class="cdot">·</span>
+      <span>5,000+ Traders</span>
+      <span class="cdot">·</span>
+      <span>Join Now ✦</span>
+    </div>
   </div>
 
-  <!-- DISCLAIMER -->
   <div class="disc reveal d7">
     <b>⚠ Disclaimer:</b> All forex signals are strictly for <b>educational &amp; informational purposes only</b>. Trading forex involves high risk. Past performance does not guarantee future results. Trade at your own risk.
   </div>
@@ -344,7 +439,6 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
 </footer>
 
 <script>
-/* ── PARTICLES ── */
 const c=document.getElementById('c'),ctx=c.getContext('2d');
 let W=c.width=innerWidth,H=c.height=innerHeight;
 const cols=['0,255,80','0,255,80','255,51,73','255,200,0'];
@@ -369,11 +463,10 @@ const pts=Array.from({length:65},()=>({
 })();
 window.addEventListener('resize',()=>{W=c.width=innerWidth;H=c.height=innerHeight});
 
-/* ── SCROLL REVEAL ── */
 const revEls=document.querySelectorAll('.reveal');
 function runReveal(){
   revEls.forEach(el=>{
-    if(el.getBoundingClientRect().top < window.innerHeight - 20)
+    if(el.getBoundingClientRect().top<window.innerHeight-20)
       el.classList.add('visible');
   });
 }
@@ -382,36 +475,17 @@ document.addEventListener('DOMContentLoaded',()=>setTimeout(runReveal,60));
 runReveal();
 </script>
 
-<!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2051682805381920');
-fbq('track', 'PageView');
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2051682805381920');fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2051682805381920&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2051682805381920&ev=PageView&noscript=1"/></noscript>
 
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '25981094378198995');
-fbq('track', 'PageView');
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','25981094378198995');fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=25981094378198995&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=25981094378198995&ev=PageView&noscript=1"/></noscript>
 
 </body>
 </html>
