@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Mahadev Forex Trading
-</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>Mahadev Forex Trading</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -47,23 +46,10 @@ canvas{position:absolute;inset:0}
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:50px 16px 48px;gap:0}
 
-/* ────────────────────────────────────────────
-   SCROLL REVEAL  — elements fade + slide up
-   ──────────────────────────────────────────── */
-.reveal{
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity .6s ease, transform .6s ease}
-.reveal.visible{
-  opacity:1;
-  transform:translateY(0)}
-.d1{transition-delay:.05s}
-.d2{transition-delay:.14s}
-.d3{transition-delay:.23s}
-.d4{transition-delay:.32s}
-.d5{transition-delay:.41s}
-.d6{transition-delay:.50s}
-.d7{transition-delay:.59s}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.05s}.d2{transition-delay:.14s}.d3{transition-delay:.23s}
+.d4{transition-delay:.32s}.d5{transition-delay:.41s}.d6{transition-delay:.50s}.d7{transition-delay:.59s}
 
 /* ── LOGO ── */
 .logo-area{position:relative;display:flex;flex-direction:column;align-items:center;margin-bottom:12px}
@@ -143,15 +129,11 @@ canvas{position:absolute;inset:0}
 .fi{font-size:clamp(17px,4vw,21px)}
 .ft{font-size:clamp(8px,2vw,9.5px);font-weight:700;color:rgba(255,255,255,.75);text-align:center;white-space:nowrap}
 
-/* ═══════════════════════════════
-   CTA SECTION — compact + clean
-   ═══════════════════════════════ */
+/* ── CTA ── */
 .cta-area{display:flex;flex-direction:column;align-items:center;gap:9px;margin-bottom:12px}
 .cta-row{display:flex;gap:10px;width:min(440px,90vw)}
 
-/* ── TELEGRAM BUTTON ── */
-.cta{
-  position:relative;flex:1;overflow:hidden;
+.cta{position:relative;flex:1;overflow:hidden;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
   padding:11px 10px;border-radius:16px;text-decoration:none;
   background:linear-gradient(135deg,#00ff55 0%,#00e04c 55%,#00c040 100%);
@@ -160,8 +142,8 @@ canvas{position:absolute;inset:0}
   transition:transform .2s,box-shadow .2s;
   animation:zpTg 2s ease-in-out infinite}
 @keyframes zpTg{
-  0%,100%{transform:scale(1);   box-shadow:0 0 26px rgba(0,255,80,.48),0 4px 16px rgba(0,0,0,.44)}
-  50%    {transform:scale(1.04);box-shadow:0 0 48px rgba(0,255,80,.7), 0 7px 22px rgba(0,0,0,.55)}}
+  0%,100%{transform:scale(1);box-shadow:0 0 26px rgba(0,255,80,.48),0 4px 16px rgba(0,0,0,.44)}
+  50%{transform:scale(1.04);box-shadow:0 0 48px rgba(0,255,80,.7),0 7px 22px rgba(0,0,0,.55)}}
 .cta::before{content:'';position:absolute;top:0;left:-120%;width:55%;height:100%;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
   animation:sheen 2.4s ease-in-out infinite}
@@ -172,9 +154,7 @@ canvas{position:absolute;inset:0}
 .cta-tag{font-size:clamp(8px,2vw,10px);font-weight:800;letter-spacing:.8px;text-transform:uppercase;line-height:1;opacity:.85}
 .cta-main{font-size:clamp(11px,2.8vw,14px);font-weight:900;letter-spacing:.4px;text-transform:uppercase;line-height:1}
 
-/* ── WHATSAPP BUTTON ── */
-.cta-wa{
-  position:relative;flex:1;overflow:hidden;
+.cta-wa{position:relative;flex:1;overflow:hidden;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
   padding:11px 10px;border-radius:16px;text-decoration:none;
   background:linear-gradient(135deg,#25D366 0%,#1ab855 55%,#128C7E 100%);
@@ -183,8 +163,8 @@ canvas{position:absolute;inset:0}
   transition:transform .2s,box-shadow .2s;
   animation:zpWa 2.2s ease-in-out infinite .3s}
 @keyframes zpWa{
-  0%,100%{transform:scale(1);   box-shadow:0 0 20px rgba(37,211,102,.4), 0 4px 16px rgba(0,0,0,.44)}
-  50%    {transform:scale(1.04);box-shadow:0 0 42px rgba(37,211,102,.62),0 7px 22px rgba(0,0,0,.55)}}
+  0%,100%{transform:scale(1);box-shadow:0 0 20px rgba(37,211,102,.4),0 4px 16px rgba(0,0,0,.44)}
+  50%{transform:scale(1.04);box-shadow:0 0 42px rgba(37,211,102,.62),0 7px 22px rgba(0,0,0,.55)}}
 .cta-wa::before{content:'';position:absolute;top:0;left:-120%;width:55%;height:100%;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
   animation:sheen 2.7s ease-in-out infinite .35s}
@@ -198,8 +178,7 @@ canvas{position:absolute;inset:0}
   color:rgba(255,255,255,.17);text-transform:uppercase;text-align:center}
 
 /* ── DISCLAIMER ── */
-.disc{padding:7px 14px;
-  border:1px dashed rgba(255,200,0,.14);border-radius:10px;
+.disc{padding:7px 14px;border:1px dashed rgba(255,200,0,.14);border-radius:10px;
   background:rgba(255,200,0,.018);
   font-size:clamp(7.5px,1.9vw,9px);color:rgba(255,255,255,.18);
   text-align:center;max-width:min(500px,88vw);line-height:1.6}
@@ -214,11 +193,7 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
 .credit a{color:#00ff55;font-weight:700;text-decoration:none;transition:.2s}
 .credit a:hover{color:#fff}
 
-@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-
-/* ════════════════════════
-   PHONE ≤ 480px
-   ════════════════════════ */
+/* ── PHONE ── */
 @media(max-width:480px){
   .page{padding:44px 12px 46px}
   .logo-area{margin-bottom:8px}
@@ -233,7 +208,6 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
   .proof{margin-bottom:8px;gap:5px}
   .feats{gap:5px;margin-bottom:11px}
   .feat{padding:7px 7px;min-width:50px;border-radius:10px}
-  /* CTA compact on phone */
   .cta-row{width:92vw;gap:7px}
   .cta,.cta-wa{padding:10px 6px;border-radius:13px}
   .cta-icon svg,.wa-icon svg{width:15px;height:15px}
@@ -242,15 +216,9 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
   .cta-area{gap:7px;margin-bottom:9px}
   .disc{font-size:7.5px;padding:6px 11px}
 }
-
-/* very short phones */
 @media(max-height:620px){
-  .tagline{display:none}
-  .proof{display:none}
-  .disc{display:none}
-  .logo-area{margin-bottom:5px}
-  .stats{margin-bottom:7px}
-  .feats{margin-bottom:9px}
+  .tagline{display:none}.proof{display:none}.disc{display:none}
+  .logo-area{margin-bottom:5px}.stats{margin-bottom:7px}.feats{margin-bottom:9px}
 }
 </style>
 </head>
@@ -263,11 +231,34 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
   <div class="bg-cg"></div>
 </div>
 
-<!-- TICKER -->
+<!-- TICKER — Forex pairs -->
 <div class="ticker">
   <div class="t-track">
-    <span class="ti up">NIFTY 50 ▲ +1.24%</span><span class="ti dn">BANKNIFTY ▼ −0.87%</span><span class="ti up">SENSEX ▲ +0.96%</span><span class="ti up">RELIANCE ▲ +2.10%</span><span class="ti dn">TCS ▼ −0.43%</span><span class="ti up">GOLD ▲ +0.78%</span><span class="ti dn">INFY ▼ −1.10%</span><span class="ti up">HDFC ▲ +0.55%</span><span class="ti up">WIPRO ▲ +1.30%</span><span class="ti dn">SBIN ▼ −0.62%</span>
-    <span class="ti up">NIFTY 50 ▲ +1.24%</span><span class="ti dn">BANKNIFTY ▼ −0.87%</span><span class="ti up">SENSEX ▲ +0.96%</span><span class="ti up">RELIANCE ▲ +2.10%</span><span class="ti dn">TCS ▼ −0.43%</span><span class="ti up">GOLD ▲ +0.78%</span><span class="ti dn">INFY ▼ −1.10%</span><span class="ti up">HDFC ▲ +0.55%</span><span class="ti up">WIPRO ▲ +1.30%</span><span class="ti dn">SBIN ▼ −0.62%</span>
+    <span class="ti up">EUR/USD ▲ +0.42%</span>
+    <span class="ti dn">GBP/USD ▼ −0.31%</span>
+    <span class="ti up">USD/JPY ▲ +0.67%</span>
+    <span class="ti up">XAU/USD ▲ +1.15%</span>
+    <span class="ti dn">AUD/USD ▼ −0.28%</span>
+    <span class="ti up">USD/CAD ▲ +0.19%</span>
+    <span class="ti dn">NZD/USD ▼ −0.54%</span>
+    <span class="ti up">USD/CHF ▲ +0.33%</span>
+    <span class="ti up">WTI OIL ▲ +0.88%</span>
+    <span class="ti dn">EUR/GBP ▼ −0.22%</span>
+    <span class="ti up">BTC/USD ▲ +2.40%</span>
+    <span class="ti dn">USD/INR ▼ −0.14%</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ti up">EUR/USD ▲ +0.42%</span>
+    <span class="ti dn">GBP/USD ▼ −0.31%</span>
+    <span class="ti up">USD/JPY ▲ +0.67%</span>
+    <span class="ti up">XAU/USD ▲ +1.15%</span>
+    <span class="ti dn">AUD/USD ▼ −0.28%</span>
+    <span class="ti up">USD/CAD ▲ +0.19%</span>
+    <span class="ti dn">NZD/USD ▼ −0.54%</span>
+    <span class="ti up">USD/CHF ▲ +0.33%</span>
+    <span class="ti up">WTI OIL ▲ +0.88%</span>
+    <span class="ti dn">EUR/GBP ▼ −0.22%</span>
+    <span class="ti up">BTC/USD ▲ +2.40%</span>
+    <span class="ti dn">USD/INR ▼ −0.14%</span>
   </div>
 </div>
 
@@ -280,26 +271,28 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
       <div class="l-spin"></div>
       <div class="l-bg"></div>
       <div class="l-img">
-        <img src="https://onebyone.site/wp-content/uploads/2026/03/mjje.jpg" alt="Trading With Guru">
+        <img src="https://onebyone.site/wp-content/uploads/2026/03/mjje.jpg" alt="Mahadev Forex Trading"/>
       </div>
       <div class="l-glow"></div>
     </div>
-    <div class="king-tag">👑 KING CHANNEL</div>
+    <div class="king-tag">💹 TOP FOREX CHANNEL</div>
   </div>
 
   <!-- TITLE -->
   <div class="title-area reveal d2">
-    <h1><span class="tg">Mahadev</span> <span class="tw">Forex</span> <span class="tr"> Trading</span></h1>
-    <div class="sub1">Premium Stock Market Intelligence</div>
+    <h1><span class="tg">Mahadev</span> <span class="tw">Forex</span> <span class="tr">Trading</span></h1>
+    <div class="sub1">Premium Forex &amp; Currency Market Signals</div>
   </div>
 
   <!-- TAGLINE -->
-  <div class="tagline reveal d3">🔥 <span>4,000+ traders</span> already making smarter decisions — join free today!</div>
+  <div class="tagline reveal d3">
+    💰 <span>5,000+ forex traders</span> are already winning — get free signals today!
+  </div>
 
   <!-- STATS -->
   <div class="stats reveal d4">
-    <div class="stat"><span class="sn">67+</span><span class="sl">Members</span></div>
-    <div class="stat"><span class="sn">DAILY</span><span class="sl">Research Calls</span></div>
+    <div class="stat"><span class="sn">5K+</span><span class="sl">Members</span></div>
+    <div class="stat"><span class="sn">DAILY</span><span class="sl">Forex Signals</span></div>
     <div class="stat"><span class="sn">100%</span><span class="sl">Free to Join</span></div>
   </div>
 
@@ -307,18 +300,18 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
   <div class="proof reveal d4">
     <div class="proof-item"><span class="stars">★★★★★</span></div>
     <div class="pdot"></div>
-    <div class="proof-item">Trusted by thousands of traders</div>
+    <div class="proof-item">Trusted by thousands of forex traders</div>
     <div class="pdot"></div>
-    <div class="proof-item">Updated every trading day</div>
+    <div class="proof-item">Signals every trading session</div>
   </div>
 
   <!-- FEATS -->
   <div class="feats reveal d5">
-    <div class="feat"><div class="fi">📊</div><div class="ft">Nifty Calls</div></div>
-    <div class="feat"><div class="fi">🎯</div><div class="ft">Targets</div></div>
-    <div class="feat"><div class="fi">⚡</div><div class="ft">Live Alerts</div></div>
-    <div class="feat"><div class="fi">📈</div><div class="ft">F&amp;O Tips</div></div>
-    <div class="feat"><div class="fi">🛡️</div><div class="ft">Risk Levels</div></div>
+    <div class="feat"><div class="fi">💱</div><div class="ft">Forex Pairs</div></div>
+    <div class="feat"><div class="fi">🎯</div><div class="ft">Entry &amp; TP</div></div>
+    <div class="feat"><div class="fi">⚡</div><div class="ft">Live Signals</div></div>
+    <div class="feat"><div class="fi">🥇</div><div class="ft">Gold / XAU</div></div>
+    <div class="feat"><div class="fi">🛡️</div><div class="ft">Stop Loss</div></div>
   </div>
 
   <!-- CTA -->
@@ -329,7 +322,7 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
       <a class="cta" href="https://t.me/+yFTKx53ZJYI3ZjQ1" target="_blank" onclick="event.stopPropagation()">
         <div class="cta-icon">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247-2.007 9.455c-.148.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 14.367l-2.97-.927c-.646-.204-.66-.646.136-.956l11.59-4.467c.537-.195 1.007.12.836.956l-.22-.726z"/></svg>
-          <span class="cta-tag">🚀 Join Now on</span>
+          <span class="cta-tag">🚀 Join Free on</span>
         </div>
         <span class="cta-main">Telegram</span>
       </a>
@@ -344,11 +337,13 @@ footer{position:fixed;bottom:0;left:0;right:0;z-index:300;
       </a>
 
     </div>
-    <div class="cta-sub">✦ Free Access &nbsp;·&nbsp; No Spam &nbsp;·&nbsp; 4,158+ Members ✦</div>
+    <div class="cta-sub">✦ Free Signals &nbsp;·&nbsp; No Spam &nbsp;·&nbsp; 5,000+ Forex Traders ✦</div>
   </div>
 
   <!-- DISCLAIMER -->
-  <div class="disc reveal d7"><b>⚠ Disclaimer:</b> All research calls are strictly for <b>educational purposes only</b>. Not SEBI registered. Trade at your own risk.</div>
+  <div class="disc reveal d7">
+    <b>⚠ Disclaimer:</b> All forex signals are strictly for <b>educational &amp; informational purposes only</b>. Trading forex involves high risk. Past performance does not guarantee future results. Trade at your own risk.
+  </div>
 
 </div>
 
@@ -391,7 +386,6 @@ function runReveal(){
   });
 }
 window.addEventListener('scroll',runReveal,{passive:true});
-// Fire after load so above-fold items appear immediately
 document.addEventListener('DOMContentLoaded',()=>setTimeout(runReveal,60));
 runReveal();
 </script>
@@ -410,11 +404,8 @@ fbq('init', '2051682805381920');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2051682805381920&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+src="https://www.facebook.com/tr?id=2051682805381920&ev=PageView&noscript=1"/></noscript>
 
-  <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -428,8 +419,7 @@ fbq('init', '25981094378198995');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=25981094378198995&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+src="https://www.facebook.com/tr?id=25981094378198995&ev=PageView&noscript=1"/></noscript>
+
 </body>
 </html>
